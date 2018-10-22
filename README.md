@@ -11,6 +11,6 @@ npm run dev
 ```
 
 ### Links
-https://itch.io/jam/game-off-2018
-https://photonstorm.github.io/phaser3-docs/index.html
-https://github.com/digitsensitive/phaser3-typescript
+- https://itch.io/jam/game-off-2018
+- https://photonstorm.github.io/phaser3-docs/index.html
+- https://github.com/digitsensitive/phaser3-typescript
