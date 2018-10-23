@@ -6,46 +6,93 @@ import { Demo } from "./demo";
 const config: GameConfig = {
   type: Phaser.AUTO,
   width: 800,
-  height: 600,
+  height: 550,
   parent: "game",
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 200 }
+      gravity: { y: 0 }
     }
   },
   scene: {
     preload: preload,
-    create: create
+    create: create,
+    update: update
   }
 };
 
-function preload() {
-  this.load.setBaseURL('http://labs.phaser.io');
+var cursors;
+var ball;
+var boxes;
+var ship;
 
-  this.load.image('sky', 'assets/skies/space3.png');
-  this.load.image('logo', 'assets/sprites/phaser3-logo.png');
-  this.load.image('red', 'assets/particles/red.png');
+function preload() {
+  this.load.spritesheet('ball', 'assets/sprites/ball.png', { frameWidth: 100, frameHeight: 100, endFrame: 648 });
+  this.load.image('box_red', 'assets/sprites/box_red.png');
+  this.load.image('ship', 'assets/sprites/ship.png');
 }
 
 function create() {
-  this.add.image(400, 300, 'sky');
+  cursors = this.input.keyboard.createCursorKeys();
+   ship = this.physics.add.image(400,500, 'ship');
+   ship.body.immovable = true;
 
-  var particles = this.add.particles('red');
-
-  var emitter = particles.createEmitter({
-    speed: 100,
-    scale: { start: 1, end: 0 },
-    blendMode: 'ADD'
+  this.anims.create({
+    key: 'ball-rotate-right',
+    frames: this.anims.generateFrameNumbers('ball', { start: 0, end: 35, first: 36 }),
+    frameRate: 20,
+    repeat: -1
   });
 
-  var logo = this.physics.add.image(400, 100, 'logo');
+  this.anims.create({
+    key: 'ball-rotate-left',
+    frames: this.anims.generateFrameNumbers('ball', { start: 0, end: 35, first: 36 }),
+    frameRate: 20,
+    repeat: -1,
+    isReverse: true
+  });
 
-  logo.setVelocity(100, 200);
-  logo.setBounce(1, 1);
-  logo.setCollideWorldBounds(true);
+  boxes = this.physics.add.staticGroup();
+  for(var i = 0; i < 30; i++) {
+    for(var j = 0; j < 7; j++) {
+      boxes.create((30 * i) + 15, (30 * j) + 15, 'box_red')
+    }    
+  }
 
-  emitter.startFollow(logo);
+  ball = this.physics.add.sprite(400, 400, 'ball');
+  ball.body.bounce.set(1);
+  ball.setCollideWorldBounds(true);
+  ball.setDisplaySize(25,25);
+  ball.setVelocityX(0);
+  ball.setVelocityY(300);
+  ball.anims.play('ball-rotate-right');
+
+  this.physics.add.overlap(ball, boxes, destroyBox, null, this);
+  this.physics.add.overlap(ball, ship, shipBallCollide, null, this);
+}
+
+function update ()
+{
+  ship.x = this.input.mousePointer.x
+}
+
+function shipBallCollide(ball, ship) {
+  var ballLeft = ball.x - ball.width;
+  var ballRight = ball.x + ball.width;
+  var shipLeft = ship.x - ship.width;
+  var shipRight = ship.x + ship.width;
+  
+  ball.setVelocityY((ball.body.velocity.y * -1) - 100);
+  if(ballLeft < shipLeft) {
+    ball.setVelocityX(ball.body.velocity.x - 30);
+  }
+  if(ballRight > shipRight) {
+    ball.setVelocityX(ball.body.velocity.x + 30);
+  }
+}
+
+function destroyBox(ball, box) {
+  box.disableBody(true,true);
 }
 
 new Demo(config);
