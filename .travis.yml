@@ -3,7 +3,7 @@ node_js:
   - node
 install:
   - npm ci
-scripts:
+script:
   - npm run build:dist
 deploy:
   provider: pages
