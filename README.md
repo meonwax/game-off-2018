@@ -7,7 +7,7 @@ npm install
 ### Building and Running
 Perform a quick build (bundle.js) and start server:
 ```
-npm run dev
+npm run serve:dev
 ```
 
 ### Links
