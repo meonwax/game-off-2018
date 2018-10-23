@@ -1,6 +1,13 @@
+language: node_js
+node_js:
+  - node
+install:
+  - npm ci
+scripts:
+  - npm run build:dist
 deploy:
   provider: pages
-  #local-dir: dist
+  local-dir: dist
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   on:
