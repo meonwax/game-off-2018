@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="20" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="100" columns="10">
+  <image source="../../assets/images/tileset.png" trans="000000" width="320" height="320"/>
+  <tile id="0">
+   <objectgroup draworder="index">
+    <object id="3" x="0" y="0" width="32" height="32">
+     <ellipse/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="1">
+   <objectgroup draworder="index">
+    <object id="5" x="0" y="0" width="32" height="32">
+     <ellipse/>
+    </object>
+    <object id="6" x="0" y="0" width="32" height="16.1621"/>
+   </objectgroup>
+  </tile>
+  <tile id="2">
+   <objectgroup draworder="index">
+    <object id="1" x="0.0869565" y="0.0869565">
+     <polygon points="-0.0869565,-0.0869565 15.9164,31.911 31.913,-0.0869565"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="3">
+   <objectgroup draworder="index">
+    <object id="6" x="0" y="16.0097" width="32" height="15.9903"/>
+   </objectgroup>
+  </tile>
+  <tile id="4">
+   <objectgroup draworder="index">
+    <object id="1" x="5.95652" y="0.217391">
+     <polygon points="0.0429688,-0.214844 4.95652,1.26087 9.95652,3.47826 14.5217,6.56522 18.4783,10.4783 21.5217,14.6087 23.4783,18.7391 24.913,22.6957 26.0389,26.2932 26.0435,-0.217391"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="5">
+   <objectgroup draworder="index">
+    <object id="2" x="0" y="0" width="64" height="64">
+     <ellipse/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="10">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="32">
+     <polygon points="0,0 32,-16.125 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="11">
+   <objectgroup draworder="index">
+    <object id="1" x="32" y="0">
+     <polygon points="0,0 -32,15.25 -32,32 0,32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="12">
+   <objectgroup draworder="index">
+    <object id="1" x="32" y="0">
+     <polygon points="0,0 -32,32 0,32"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="13">
+   <objectgroup draworder="index">
+    <object id="2" x="0" y="0" width="32" height="32"/>
+   </objectgroup>
+  </tile>
+  <tile id="14">
+   <objectgroup draworder="index">
+    <object id="1" x="0" y="32">
+     <polygon points="0,0 31.996,-10.7606 32,0"/>
+    </object>
+   </objectgroup>
+  </tile>
+  <tile id="15">
+   <objectgroup draworder="index">
+    <object id="1" x="0.181818" y="21.1818">
+     <polygon points="-0.133333,-0.0888889 4.90909,-2.18182 11.1818,-5.63636 16.0909,-10.8182 20.0909,-16.3636 21.9091,-21.0909 31.8182,-21.1818 31.8182,10.8182 -0.181818,10.8182"/>
+    </object>
+   </objectgroup>
+  </tile>
+ </tileset>
+ <layer id="1" name="Kachelebene 1" width="20" height="20">
+  <data encoding="base64">
+   DgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAAEAAAwA8AAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAEAQAABgDgAAAA4AAAAPAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8AAGAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAAABAAAAAQAAAALAACAAAAAAAMAAKAOAAAADgAAAAYAAKAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAGAOAAAADgAAAAwAAOAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAADgAAAA4AAAAAAAAAAAAAAAAAAAADAABAAAAAAAAAAAAAAAAACwAAYA4AAAAOAAAACwAA4AAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAOAAAADgAAAAAAAAAAAAAADQAAAA4AAAANAACAAAAAAAAAAAAAAAAACwAAQAsAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAANAABADgAAAA0AAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAADgAAAA4AAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABgAAoAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAGAGAADAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAAAAAAACwAAAAQAAAAEAAAACwAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAADgAAAA4AAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAYAAKAAAAAADgAAAAAAAAAAAAAADgAAAA4AAAAAAAAAAAAAAAAAAAACAACgDgAAAA4AAAAOAAAAAgAAYAAAAAAAAAAAAAAAAAAAAAAGAABABgAA4AAAAAAOAAAAAAAAAAAAAAAOAAAADgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAOAAAADAAAgAsAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADQAAYA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAAwAAIALAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAMAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAMAACACwAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAAAMAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA4AAAAOAAAADgAAAA==
+  </data>
+ </layer>
+</map>
