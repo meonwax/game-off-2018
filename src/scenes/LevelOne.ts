@@ -18,7 +18,7 @@ export class LevelOne extends Phaser.Scene {
   create() {
     const map: Tilemap = this.make.tilemap({ key: 'level1', tileWidth: 32, tileHeight: 32 });
     const tileset: Tileset = map.addTilesetImage("tileset");
-    const layer: StaticTilemapLayer = map.createStaticLayer(0, tileset, 0, 0); // layer index, tileset, x, y
+    const layer: StaticTilemapLayer = map.createStaticLayer(0, tileset, 0, 0);
   }
 
   update() {
